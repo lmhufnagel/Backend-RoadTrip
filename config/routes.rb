@@ -6,7 +6,7 @@ put '/trips/:id', to: 'trips#update'
 get '/trips/:id', to: 'trips#show'
 
 get '/trips', to: 'trips#index'
-get '/', to: 'trips#home'
+get '/', to: 'trips#index'
 post '/trips/new', to: 'trips#create'
 
 get '/seats', to:'seats#index'

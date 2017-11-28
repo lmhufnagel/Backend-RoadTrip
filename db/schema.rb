@@ -26,6 +26,7 @@ ActiveRecord::Schema.define(version: 20171123030815) do
   create_table "seats", force: :cascade do |t|
     t.boolean "available"
     t.integer "price"
+    t.string "review"
     t.integer "trip_id"
     t.integer "rider_id"
   end
@@ -37,15 +38,20 @@ ActiveRecord::Schema.define(version: 20171123030815) do
     t.datetime "end_time"
     t.integer "duration"
     t.string "car"
-    t.integer "seats"
+    t.integer "available_seats"
+    t.integer "seat_price"
+    t.boolean "stops"
     t.string "map"
     t.string "comments"
     t.integer "driver_id"
+    t.integer "driver_username"
     t.integer "rider_id"
   end
 
   create_table "users", force: :cascade do |t|
-    t.string "name"
+    t.string "username"
+    t.string "first_name"
+    t.string "last_name"
     t.string "email"
     t.string "bio"
     t.string "reviews"
