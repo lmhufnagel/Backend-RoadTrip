@@ -18,9 +18,7 @@ ActiveRecord::Schema.define(version: 20171123030815) do
   create_table "reviews", force: :cascade do |t|
     t.string "body"
     t.integer "rating"
-    t.datetime "timestamp"
-    t.integer "driver_id"
-    t.integer "rider_id"
+    t.integer "user_id"
   end
 
   create_table "seats", force: :cascade do |t|
@@ -28,14 +26,14 @@ ActiveRecord::Schema.define(version: 20171123030815) do
     t.integer "price"
     t.string "review"
     t.integer "trip_id"
-    t.integer "rider_id"
+    t.integer "user_id"
   end
 
   create_table "trips", force: :cascade do |t|
     t.string "start_location"
     t.string "end_location"
-    t.datetime "start_time"
-    t.datetime "end_time"
+    t.string "start_time"
+    t.string "end_time"
     t.integer "duration"
     t.string "car"
     t.integer "available_seats"
@@ -43,9 +41,9 @@ ActiveRecord::Schema.define(version: 20171123030815) do
     t.boolean "stops"
     t.string "map"
     t.string "comments"
-    t.integer "driver_id"
-    t.integer "driver_username"
-    t.integer "rider_id"
+    t.integer "user_id"
+    t.string "driver_username"
+    t.string "driver_name"
   end
 
   create_table "users", force: :cascade do |t|
@@ -53,6 +51,7 @@ ActiveRecord::Schema.define(version: 20171123030815) do
     t.string "first_name"
     t.string "last_name"
     t.string "email"
+    t.string "password"
     t.string "bio"
     t.string "reviews"
     t.integer "avg_rating"

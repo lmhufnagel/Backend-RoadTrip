@@ -5,7 +5,7 @@ class CreateSeats < ActiveRecord::Migration[5.1]
       t.integer :price
       t.string :review
       t.integer :trip_id
-      t.integer :rider_id
+      t.integer :user_id
     end
   end
 end
