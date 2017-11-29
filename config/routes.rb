@@ -7,7 +7,7 @@ get '/trips/:id', to: 'trips#show'
 
 get '/trips', to: 'trips#index'
 get '/', to: 'trips#index'
-post '/trips/new', to: 'trips#create'
+post '/trips', to: 'trips#create'
 
 get '/seats', to:'seats#index'
 post '/seats', to: 'seats#create'

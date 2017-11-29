@@ -17,7 +17,6 @@ class TripsController < ApplicationController
   end
 
   def create
-    byebug
     @trip = Trip.new(trip_params)
     if @trip.save
       render json: @trip
