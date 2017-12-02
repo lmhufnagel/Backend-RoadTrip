@@ -8,6 +8,11 @@
 
 User.create(username: "lhuf", first_name: "Lisa", last_name: "Hufnagel", email: 'lmhufnagel@me.com', bio: "love to drive!", reviews: [], avg_rating: nil)
 User.create(username: "ddavis", first_name: "Dillon", last_name: "Davis", email: 'ddavis@me.com', bio: "Having passengers is rad!", reviews: [], avg_rating: nil)
-Trip.create(start_location: 'Boston, MA', end_location: 'New York, NY', start_time: '12/05/2017, 4:00pm', end_time: '12/05/2017, 8:30pm', duration: '4.5 hours', car: 'Toyota Camry', available_seats: 3, seat_price: 25, driver_username: "lhuf", user_id: 1,  )
-Trip.create(start_location: 'New York, NY', end_location: 'Boston, MA', start_time: '12/05/2017, 4:00pm', end_time: '12/05/2017, 8:30pm', duration: '4.5 hours', car: 'Jeep Wrangler', available_seats: 2, seat_price: 25, driver_username: "ddavis", user_id: 2 )
+Trip.create(start_location: 'Boston, MA', end_location: 'New York, NY', start_time: '12/05/2017, 4:00pm', end_time: '12/05/2017, 8:30pm', duration: '4.5 hours', car: 'Toyota Camry', available_seats: 3, seat_price: 25, driver_username: "lhuf", driver_name: "Lisa Hufnagel", user_id: 1,  )
+Trip.create(start_location: 'New York, NY', end_location: 'Boston, MA', start_time: '12/08/2017, 5:00pm', end_time: '12/05/2017, 10:30pm', duration: '4.5 hours', car: 'Jeep Wagoneer', available_seats: 2, seat_price: 35, driver_username: "ddavis", driver_name: "Dillon Davis", user_id: 2 )
+Trip.create(start_location: 'Washington, DC', end_location: 'Boston, MA', start_time: '12/06/2017, 2:00pm', end_time: '12/05/2017, 11:00pm', duration: '4.5 hours', car: 'Escalade', available_seats: 5, seat_price: 55, driver_username: "jlaw", driver_name: "Jennifer Lawrence", user_id: 3 )
+Trip.create(start_location: 'Philadelphia, PA', end_location: 'Boston, MA', start_time: '12/03/2017, 6:00pm', end_time: '12/05/2017, 2:00am', duration: '4.5 hours', car: 'Gremlin', available_seats: 1, seat_price: 15, driver_username: "ddlewis", driver_name: "Daniel Day Lewis", user_id: 4 )
+Trip.create(start_location: 'New York, NY', end_location: 'Philadelphia, PA', start_time: '12/15/2017, 10:00am', end_time: '12/05/2017, 2:00pm', duration: '4.5 hours', car: 'Corvette', available_seats: 2, seat_price: 40, driver_username: "thanks", driver_name: "Tom Hanks", user_id: 5 )
+Trip.create(start_location: 'New York, NY', end_location: 'Boston, MA', start_time: '12/07/2017, 1:00pm', end_time: '12/05/2017, 5:30pm', duration: '4.5 hours', car: 'Volvo Amazon', available_seats: 2, seat_price: 35, driver_username: "ddavis", driver_name: "Dillon Davis", user_id: 2 )
+
 Review.create(user_id: 1, rating: 4, body: 'It was ok, music too loud')
