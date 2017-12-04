@@ -19,6 +19,13 @@ class TripsController < ApplicationController
   def create
     @trip = Trip.new(trip_params)
     if @trip.save
+      num_seats = trip_params[:available_seats].to_i
+      num_seats.times do
+        @seat = Seat.new()
+        @trip.seats << @seat
+        @seat.available = true
+        @seat.save
+      end
       render json: @trip
     else
       render json: false
