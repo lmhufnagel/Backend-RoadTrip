@@ -1,4 +1,4 @@
 class Seat < ApplicationRecord
-  belongs_to :trip
-  belongs_to :user, optional: true #, through: :trip
+  belongs_to :ride, class_name: "Trip"
+  belongs_to :rider, optional: true, class_name: "User"
 end

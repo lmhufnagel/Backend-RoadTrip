@@ -12,9 +12,7 @@ class CreateTrips < ActiveRecord::Migration[5.1]
       t.boolean :stops
       t.string :map
       t.string :comments
-      t.integer :user_id
-      t.string :driver_username
-      t.string :driver_name
+      t.integer :driver_id
     end
   end
 end

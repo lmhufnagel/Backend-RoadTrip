@@ -9,8 +9,6 @@ class CreateUsers < ActiveRecord::Migration[5.1]
       t.string :bio
       t.string :reviews
       t.integer :avg_rating
-      t.integer :trip_id
-      t.integer :seat_id
       t.boolean :driving
     end
   end

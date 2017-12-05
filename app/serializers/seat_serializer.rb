@@ -1,5 +1,4 @@
-class TripSerializer < ActiveModel::Serializer
-  attributes :id, :available, :trip_id, :user_id
-  belongs_to :user
-  belongs_to :user, through: :trip
+class SeatSerializer < ActiveModel::Serializer
+  attributes :id, :available, :rider_id, :ride_id
+
 end

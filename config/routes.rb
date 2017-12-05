@@ -11,6 +11,7 @@ post '/trips', to: 'trips#create'
 
 get '/seats', to:'seats#index'
 post '/seats', to: 'seats#create'
+patch '/seats', to: 'seats#update'
 
 get '/users', to: 'users#index'
 post '/users', to: 'users#create'
