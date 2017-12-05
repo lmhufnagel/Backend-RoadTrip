@@ -51,7 +51,7 @@ class TripsController < ApplicationController
   private
 
   def trip_params
-    params.require(:trip).permit(:start_location, :end_location, :start_time, :end_time, :duration, :car, :available_seats, :seat_price, :stops, :map, :comments, :user_id, :driver_username, :driver_name)
+    params.require(:trip).permit(:start_location, :end_location, :start_time, :end_time, :duration, :car, :available_seats, :seat_price, :stops, :map, :comments, :driver_id)
   end
 
   def find_trip
