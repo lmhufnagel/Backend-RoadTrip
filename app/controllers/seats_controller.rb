@@ -27,8 +27,8 @@ class SeatsController < ApplicationController
   # end
 
   def update
-    
-    find_seat(params[:seat][:ride_id])
+
+    @seat = find_seat(params[:seat][:ride_id])
     @seat.update(seat_params)
     render json: @seat
   end
@@ -41,11 +41,13 @@ class SeatsController < ApplicationController
   private
 
   def seat_params
-    params.require(:seat).permit(:available, :ride_id, :rider_id)
+    params.require(:seat).permit(:id, :available, :ride_id, :rider_id)
   end
 
   def find_seat(id)
-    @seat = Seat.find(id)
+    # @seat = Seat.find(id)
+    trip = Trip.find(id)
+    trip.seats.find{|seat| seat.available == true}
   end
 
 end
