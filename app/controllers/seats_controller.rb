@@ -20,11 +20,6 @@ class SeatsController < ApplicationController
     render json: @seats
   end
 
-  # def update
-  #   find_seat
-  #   @seat.update(seat_params)
-  #   render json: @seat
-  # end
 
   def update
 
@@ -45,7 +40,6 @@ class SeatsController < ApplicationController
   end
 
   def find_seat(id)
-    # @seat = Seat.find(id)
     trip = Trip.find(id)
     trip.seats.find{|seat| seat.available == true}
   end

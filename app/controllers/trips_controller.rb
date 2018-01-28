@@ -1,10 +1,5 @@
 class TripsController < ApplicationController
 
-  # def cities
-  #   @cities = Trip.select(:city).distinct.map {|c| c.city}
-  #   render json: @cities
-  # end
-
   def index
 
     @trips = Trip.all
