@@ -20,9 +20,7 @@ class SeatsController < ApplicationController
     render json: @seats
   end
 
-
   def update
-
     @seat = find_seat(params[:seat][:ride_id])
     @seat.update(seat_params)
     render json: @seat

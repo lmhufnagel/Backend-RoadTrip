@@ -3,5 +3,4 @@ class Trip < ApplicationRecord
   has_many :seats, foreign_key: :ride_id
   has_many :reviews
 
-
 end
